@@ -1,0 +1,334 @@
+@charset "UTF-8"
+
+	html, body {
+    margin: 0;
+    padding: 0;
+}
+
+	*{
+		margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	}
+
+ #left{
+ 
+ 	width: 75%;
+ 	height: 100vh;
+ 	float:left;
+ 	
+
+ }
+
+ #right{
+ 	width: 25%;
+ 	height: 100vh;
+ 	border: 1px solid #aaa;
+ 	float: right;
+ }
+
+ #video_ply{
+ 	width: 100%;
+ 	height:85%;
+ }
+
+ #progress_box{
+ 	width: 100%;
+ 	height:10px;
+ 	background-color: white;
+ 	margin-bottom: 5px;
+ }
+
+ #progress_bar{
+ 	width:0%;
+ 	height:10px;
+ 	background: #7F00FF;
+background: linear-gradient(90deg, rgba(127, 0, 255, 1) 0%, rgba(225, 0, 255, 1) 100%);
+animation: pageLoad 0.6s ease;
+ }
+
+ #controls{
+ 	width:100%;
+ 	height:70px;
+ 	background-color:black;
+ 	display: flex;
+ 	justify-content: space-between;
+ 	align-items: center;
+ }
+
+ #play_btn {
+ 	font-size: 50px;
+ 	color:white;
+ 	cursor:pointer;
+ 	margin-bottom: 5px;
+ }
+
+  #left_btn ,  #right_btn{
+ 	font-size: 30px;
+ 	color:white;
+ 	cursor:pointer;
+ 	margin-bottom: 10px;
+ }
+ 
+
+ #play_tools{
+ 	display:flex;
+ 	justify-content: center;
+ 	align-items: center;
+
+ }
+
+ #v_timing{
+ 	color:white;
+ 	font-size: 20px;
+ 	margin-left: 20px;
+ 	font-family: 'Ubuntu' , sans-serif;
+ }
+
+ #volume , #setting , #full_screen{
+ 	color:white;
+ 	font-size: 26px;
+ 	margin-right: 20px;
+ 	cursor: pointer;
+ }
+
+ #timing , #play_tools , #other_tools{
+ 	width: 33.33%;
+ }
+
+ #other_tools{
+ 	display: flex;
+ 	justify-content:end;
+ }
+ #top{
+ 	width: 100%;
+ 	height:17%;
+ 	background-color: #ddd;
+ 	padding: 15px;
+ 	position: relative;
+ }
+
+ #top h3{
+ 	font-family: 'Ubuntu' , sans-serif;
+ 	text-align: center;
+ 	font-size: 25px;
+ }
+
+ #search{
+ 	width: 100%;
+ 	padding: 8px;
+ 	border: 1px solid #ccc;
+ 	font-family: 'Ubuntu' , sans-serif;
+ 	outline:none;
+ 	margin-top: 15px;
+
+ }
+
+ #open_video_box_btn{
+ 	position: absolute;
+ 	top:15px;
+ 	right: 15px;
+ 	width:30px;
+ 	cursor: pointer;
+ 	font-size:30px;
+ }
+
+#add_video_box{
+	width:80%;
+	height:auto;
+	border-radius: 15px 0px 15px 15px;
+	background-color: #323232;
+	position: absolute;
+	top:25px;
+	right:45px;
+	padding: 20px;
+	display: none;
+ }
+
+ #add_video_box h2{
+ 	color:white;
+ 	font-family: 'Ubuntu' , sans-serif;
+ 	margin-bottom: 15px;
+ }
+
+ #video_name , #video_link{
+ 	width:100%;
+ 	padding: 8px;
+ 	font-family: 'Ubuntu' , sans-serif;
+ 	border: 1px solid #ccc;
+ 	margin-bottom: 15px;
+ 	outline: none;
+ }
+
+ #add_video_btn{
+ 	width: 70px;
+ 	background-color: white;
+ 	border: none;
+ 	outline: none;
+ 	padding: 8px;
+ 	font-family: 'Ubuntu' , sans-serif;
+ }
+
+ #bottom{
+ 	width: 100%;
+ 	height:80%;
+
+ 	overflow: auto;
+ 	padding: 20px;
+ }
+
+ #main_video_box{
+ 	width: 100%;
+ 	height:auto;
+ 	background-color: white;
+ 	box-shadow: 0 0 6px #ccc;
+ 	margin-bottom: 15px;
+ }
+
+ #playlist_video_name{
+ 	width: 100%;
+ 	padding:10px;
+ 	font-size: 18px;
+ 	font-family: 'Ubuntu' , sans-serif;
+ }
+
+ #video_play_btn{
+ 	width: 50%;
+ 	border: none;
+ 	padding: 9px;
+ 	font-family: 'Ubuntu' , sans-serif;
+ 	cursor: pointer;
+ 	background-color: #4285F4;
+ 	color:white;
+ }
+
+ #video_delete_btn{
+ 	width: 50%;
+ 	border: none;
+ 	padding: 9px;
+ 	font-family: 'Ubuntu' , sans-serif;
+ 	cursor: pointer;
+ 	background-color: #EA4335;
+ 	color:white;
+ }
+
+ #vol_ctrl{
+ 	appearance: none;
+ 	outline: none;
+ 	width: 100px;
+ 	background-color: red;
+ 	border-radius: 10px;
+ 	position: absolute;
+ 	left:-30px;
+ 	top: -65px;
+ 	transform: rotate(270deg);
+ 	display: none;
+ 	transition: opacity 1s;
+ }
+
+ #vol_ctrl::-webkit-slider-thumb{
+ 	appearance: none;
+ 	width: 20px;
+ 	height:20px;
+ 	border-radius: 20px;
+ 	background-color: #fff;
+ }
+
+  #vol_ctrl::-webkit-slider{
+ 	appearance: none;
+ 	width: 20px;
+ 	height:20px;
+ 	border-radius: 0px;
+ 	background-color: #ccc;
+ }
+
+ #vol_control , #speed_control{
+ 	width: fit-content;
+ 	position: relative;
+
+ }
+
+#speed_ctrl{
+ 	appearance: none;
+ 	background-color: blue;
+ 	transform: rotate(270deg);
+ 	width: 100px;
+ 	border-radius: 20px;
+ 	position: absolute;
+ 	top:-65px;
+ 	left:-36px;
+ 	display: none;
+
+}
+
+#speed_ctrl::-webkit-slider-thumb{
+	appearance: none;
+	width: 20px;
+ 	height:20px;
+ 	border-radius: 20px;
+ 	background-color: #fff;
+
+}
+
+#ply_add_v_f_btn , #ply_add_v_f_btn_cls{
+	width:80px;
+	height:30px;
+	background-color: #6dceff;
+	float: right;
+	display: none;
+}
+
+#go_b_t_p_page{
+	font-size: 40px;
+	position: absolute;
+	top: 20px;
+	left: 50px;
+}
+
+/* responsive coding */
+
+@media(max-width: 767px)
+{
+	#left{
+		width:100%;
+	}
+
+	#right{
+		width: 100%;
+	}
+
+	#volume, #setting, #full_screen{
+		font-size: 20px;
+		margin-right: 14px;
+	} 
+
+	#left_btn, #right_btn {
+    font-size: 20px;
+	}
+
+	#play_btn {
+    font-size: 30px;
+	}
+
+	#v_timing {
+    color: white;
+    font-size: 15px;
+	}
+
+	#controls {
+    width: 100%;
+    height: 45px;
+	}
+
+	#progress_box , #progress_bar{
+		height:4px;
+	}
+
+	#go_b_t_p_page{
+	font-size: 30px;
+	position: absolute;
+	top: 12px;
+	left: 12px;
+}
+}
+

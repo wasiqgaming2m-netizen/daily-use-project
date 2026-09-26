@@ -1,0 +1,200 @@
+@charset "UTF-8";
+#container{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 20000;
+        }
+#page_cover{
+            width:100%;
+            height:100vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background: #7F00FF;
+background: linear-gradient(90deg, rgba(127, 0, 255, 0.15) 0%, rgba(225, 0, 255, 0.15) 100%);
+animation: pageLoad 0.6s ease;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 20000;
+        }
+
+        #profile_box{
+            
+            
+            width:300px;
+            height:auto ;
+            background-color: white;
+            box-shadow: 0 5px 10px grey;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            padding:50px 25px;
+            flex-direction: column;  
+        }
+
+        #profile_pic{
+            width:150px;
+            height:150px;
+            border: 5px solid white;
+            border-radius: 50%;
+            position: relative;
+            box-shadow: 0px 0px 10px #ccc;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        #user_fafa_icon{
+            font-size: 120px;
+            color:#ccc;
+            position: absolute;
+            top:35px;
+            left: 50%;
+            transform: translate(-50%);
+            cursor: pointer;
+        }
+
+        #profile_pic_data{
+            width:140px;
+            height:140px;
+            opacity: 0;
+            border-radius: 0px;            
+            position: absolute;
+            top:0;
+            left: 0;
+            border-radius: 50%;
+        }
+
+        #upload_file_hint{
+            font-size: 23px;
+            font-family: verdana;
+            color:grey;
+            
+        }
+
+        #user_profile_data_name{
+            font-family: verdana;
+        }
+
+        #profile_pic_next_btn{
+            width:100%;
+            padding:10px;
+            font-size: 20px;
+            font-family: verdana;
+            color:white;
+            background: #E55D87;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #5FC3E4, #E55D87);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #5FC3E4, #E55D87); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            cursor:pointer;
+            display: none;
+        }
+
+        *{
+            box-sizing: border-box;
+            padding:0;
+            margin:0;
+        }
+
+        body{
+            background: #7F00FF;
+background: linear-gradient(90deg, rgba(127, 0, 255, 0.15) 0%, rgba(225, 0, 255, 0.15) 100%);
+animation: pageLoad 0.6s ease;
+        }
+
+        #profile_header{
+            width: 100%;
+            height:150px;
+            
+            background-image:url("../../images/header_bg_pg.jpg");
+            background-size:cover ;
+            
+        }
+
+        #profile_picture{
+            width: 150px;
+            height:150px;
+            background-color: red;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0px 0px 40px #ccc;
+            position: absolute;
+            left:50%;
+            transform: translate(-50%);
+            top:75px;
+        }
+
+        #profile_username{
+            text-align: center;
+            margin-top: 85px;
+            font-family: verdana;
+        }
+
+        #app{
+            width: 100%;
+            height:300px;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        @media(max-width:576px)
+        {
+            #app{
+                flex-direction: column;
+                margin-top: 20px;
+                height: 100%;
+            }
+        }
+
+        #contact , #player , #logout{
+            width:180px;
+            height:150px;
+            background-color:white;
+            margin: 20px;
+            border-radius: 15px;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        #contact:hover , #player:hover , #logout:hover{
+            width: 200px;
+            height:170px;
+            box-shadow: 0 0 15px #ccc;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        #contact i , #player i , #logout i  {
+            font-size: 45px;
+            color: purple;
+        }
+
+        #contact p , #player p , #logout p{
+            font-size: 25px;
+            font-family: 'Ubuntu' , sans-serif;
+            color: purple;
+            margin-top: 7px;
+        }
+
+        #profile_footer{
+            width: 100%;
+            height: 70px;
+            background-color: purple;
+             display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #profile_footer p{
+            color:white;
+            font-family: 'Ubuntu' , sans-serif;
+            font-size: 20px;
+        }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentf</title>
+  <link rel="stylesheet" type="text/css" href="css/player.css">
+      <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="http://stpamitkumar.000webhostapp.com/fa_fa_icon_5_pro/icon.js"></script>
+
+    
+</head>
+<body>
+
+    <div id="left">
+
+        <!-- video -->
+        <i class="fas fa-arrow-alt-circle-left" style="color: rgb(0, 0, 0);" id="go_b_t_p_page"></i>
+        <video id="video_ply">
+
+            <source  id="video_src" src="index_pic.mp4"></source>
+        </video>
+
+        <!-- progress bar  -->
+        <div id="progress_box">
+            <div id="progress_bar"></div>
+        </div>
+
+        <!-- controls -->
+
+        <div id="controls">
+            <div id="timing" >
+                <p id="v_timing">15:00/30:00</p>
+            </div>
+            <div id="play_tools" >
+                <i class="fas fa-chevron-circle-left" id="left_btn"></i>
+                <i class="fas fa-play-circle" id="play_btn"></i>
+                <i class="fas fa-chevron-circle-right" id="right_btn"></i>
+            </div>
+            <div id="other_tools" >
+                <div id="vol_control"><input type="range" min="0" max="1" step="0.01" id="vol_ctrl" ><i class="fas fa-volume-up" id="volume" ></i></div>
+                <div id="speed_control">
+                <i class = "fas fa-tachometer-alt"id="setting"></i>
+                <input type="range" min="0.25" max="2" step="0.25" id="speed_ctrl" ></div>
+                <i class="fas fa-expand" id="full_screen"></i>
+            </div>
+        </div>
+    </div>
+    <div id="right">
+        <div id="top">
+            <h3>Playlist</h3>
+
+            <input type="search" placeholder="Search your videos here..." id="search">
+            <i class = "fas fa-plus-circle" id="open_video_box_btn"></i>
+            <div id="add_video_box">
+                <h2>Add Videos</h2>
+                <form>
+                    <input type="text" placeholder ="enter your video name here..." id="video_name">
+                    <input type="text" placeholder="enter your video link here..." id="video_link">
+                    <button type = "submit" id="add_video_btn">Add</button>
+                </form>
+            </div>
+        </div>
+        <div id="bottom">
+            
+        </div>
+    </div>
+
+    <script src="js/player.js">
+        
+</script>
+</body>
+</html>
